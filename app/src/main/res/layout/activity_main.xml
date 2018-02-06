@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.iqquiz.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#18142E">
+
+        <LinearLayout
+            android:id="@+id/udacity_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#383547"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:contentDescription="@string/header_first"
+                android:src="@drawable/letter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/udacity"
+                android:textColor="#ececec"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/udacity_header"
+            android:background="#383547"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/header_iq_img"
+                android:src="@drawable/unnamed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="@string/quiz"
+                android:textColor="#fdfdfe"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/name_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/name"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name_edit_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#ffffff"
+                android:inputType="textCapCharacters"
+                android:textColor="#ffffff"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Question_One"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/name_view"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_1"
+            android:gravity="center"
+            android:src="@drawable/one" />
+
+        <TextView
+            android:id="@+id/One_Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Question_One"
+            android:gravity="center"
+            android:text="24,30,?,60,84,114 \n what number should replace the question mark"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Edit_Text_One"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/One_Question"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:hint="@string/answer"
+            android:inputType="number"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <ImageView
+            android:id="@+id/Question_Two"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/Edit_Text_One"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_2"
+            android:gravity="center"
+            android:src="@drawable/two" />
+
+        <TextView
+            android:id="@+id/Two_Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Question_Two"
+            android:gravity="center"
+            android:text="A Z B Y D W G T ? ? \n Which two letters come next?"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Edit_Text_Two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Two_Question"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:hint="@string/answer"
+            android:inputType="textCapCharacters"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <ImageView
+            android:id="@+id/Question_Three"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/Edit_Text_Two"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_3"
+            android:gravity="center"
+            android:src="@drawable/three" />
+
+        <TextView
+            android:id="@+id/Three_Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Question_Three"
+            android:gravity="center"
+            android:text="@string/if_4_apples_and_6_bananas_cost_1_56_n_and_9_apples_and_7_bananas_cost_2_60_nwhat_is_the_cost_of_one_apple"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Edit_Text_Three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Three_Question"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:hint="@string/answer"
+            android:inputType="numberDecimal"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <ImageView
+            android:id="@+id/Question_Four"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/Edit_Text_Three"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_4"
+            android:gravity="center"
+            android:src="@drawable/four" />
+
+        <TextView
+            android:id="@+id/Four_Question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Question_Four"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/only_one_group_of_six_letters_below_can_be_rearranged_to_spell_out_a_six_letter_word_in_the_english_language_identify_the_word"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/Radio_Group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Four_Question"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ICKTEA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/icktea"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/WLONUD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/wlonud"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/XOLEIN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/xolein"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/ARHCLO"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/arhclo"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/Question_Five"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/Radio_Group"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_5"
+            android:gravity="center"
+            android:src="@drawable/five" />
+
+        <TextView
+            android:id="@+id/Five_Question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Question_Five"
+            android:gravity="center"
+            android:text="A, AB, ABD, ABDG, ABDGK, ??????\nWhat group of letters comes next?"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Edit_Text_Four"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Five_Question"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:hint="@string/answer"
+            android:inputType="textCapCharacters"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <ImageView
+            android:id="@+id/Question_Six"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/Edit_Text_Four"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_6"
+            android:gravity="center"
+            android:src="@drawable/six" />
+
+        <TextView
+            android:id="@+id/Six_Question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Question_Six"
+            android:gravity="center"
+            android:text="@string/how_many_cases_do_you_need_if_you_have_to_pack_112_pairs_of_shoes_into_cases_that_each_hold_28_shoes"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Edit_Text_Five"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Six_Question"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:hint="@string/answer"
+            android:inputType="number"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <ImageView
+            android:id="@+id/Question_Seven"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/Edit_Text_Five"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_7"
+            android:gravity="center"
+            android:src="@drawable/seven" />
+
+        <TextView
+            android:id="@+id/Seven_question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Question_Seven"
+            android:gravity="center"
+            android:text="@string/identify_two_words_that_form_a_connection_analogy_thereby_relating_to_the_words_in_capitals_in_the_same_way"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/Edit_Text_Six"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Seven_question"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dingle"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/check_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/corrie"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/check_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/dell"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/check_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/depression"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/check_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/abyss"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Edit_Text_Seven"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/Edit_Text_Six"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/gulch"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/check_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/wide"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/check_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/coomb"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/check_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/glen"
+                android:textColor="#ffffff" />
+
+            <CheckBox
+                android:id="@+id/check_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/canyon"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Question_Eight"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/Edit_Text_Seven"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_8"
+            android:gravity="center"
+            android:src="@drawable/eight" />
+
+        <TextView
+            android:id="@+id/Eight_Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Question_Eight"
+            android:gravity="center"
+            android:text="What number is, logically, missing from the sequence below? \n348269, 284315, *****, 8438, 4811, 842, 86"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Edit_Text_Eight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Eight_Question"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:hint="@string/answer"
+            android:inputType="numberDecimal"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <ImageView
+            android:id="@+id/Question_Nine"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/Edit_Text_Eight"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_9"
+            android:gravity="center"
+            android:src="@drawable/nine" />
+
+        <TextView
+            android:id="@+id/Nine_Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Question_Nine"
+            android:gravity="center"
+            android:text="@string/what_day_comes_three_days_after_the_day_which_comes_two_days_after_the_day_which_comes_immediately_after_the_day_which_comes_two_days_after_monday"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Edit_Text_Nine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Nine_Question"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:hint="@string/answer"
+            android:inputType="numberDecimal"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <ImageView
+            android:id="@+id/Question_Ten"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/Edit_Text_Nine"
+            android:layout_margin="10dp"
+            android:background="#383547"
+            android:contentDescription="@string/q_10"
+            android:gravity="center"
+            android:src="@drawable/ten" />
+
+        <TextView
+            android:id="@+id/Ten_Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Question_Ten"
+            android:gravity="center"
+            android:text="@string/a_photograph_measuring_3_9_4_6_cm_is_to_be_enlarged_if_the_shortest_side_of_the_enlargement_is_17_55_cm_what_is_the_length_of_the_longest_side"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Edit_Text_Ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Ten_Question"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:hint="@string/answer"
+            android:inputType="numberDecimal"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Edit_Text_Ten"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/score"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#383547"
+                android:onClick="order2"
+                android:text="@string/score"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#383547"
+                android:onClick="order3"
+                android:text="@string/reset"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
